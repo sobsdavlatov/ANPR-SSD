@@ -21,7 +21,6 @@ print("Inputs:", input_names)
 print("Outputs:", output_names)
 
 #Freeze the model
-convert_variables_to_constants_v2
 frozen_func = convert_variables_to_constants_v2(full_model)
 frozen_func.graph.as_graph_def()
 
