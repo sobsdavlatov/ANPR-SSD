@@ -1,5 +1,5 @@
 import os 
-import utilities as ut
+import tools.utilities as ut
 
 #Define path to dataset 
 base_dir = "dataset/"
