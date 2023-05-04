@@ -75,7 +75,7 @@ def read_csv_and_load(csv_path, image_path):
 
     #Normalize data
     data = np.array(data, dtype="float32") / 255.0
-    targets = np.array(targets, dtype="float32") / 255.0
+    targets = np.array(targets, dtype="float32")
     X = data
     y = targets 
 
