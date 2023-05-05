@@ -2,7 +2,7 @@ import cv2
 import numpy as np
 import onnxruntime as ort
 #Load the ONNX model
-model_file = "models\detection.onnx"
+model_file = "models/detectionv6.onnx"
 sess = ort.InferenceSession(model_file)
 input_name = sess.get_inputs()[0].name
 output_name = sess.get_outputs()[0].name
@@ -22,7 +22,7 @@ outputs = sess.run([output_name], {input_name: preprocessed_image})
 detections = outputs[0]
 
 # Post-process the output detections and draw them on the image
-confidence_threshold = 0.5 # Change to your desired confidence threshold
+confidence_threshold = 0.9# Change to your desired confidence threshold
 image_height, image_width, _ = img.shape
 
 # Convert the detections from relative coordinates to absolute coordinates
@@ -32,10 +32,9 @@ detections *= np.array([image_width, image_height, image_width, image_height])
 for detection in detections:
     x1, y1, x2, y2 = detection.astype(int)
     print(x1,y1,x2, y2)
-    print(x1, y1, x2, y2)
     cv2.rectangle(img, (x1, y1), (x2, y2), (0, 255, 0), 2)
 
 # Display the output image
 cv2.imshow('Object detection', img)
 cv2.waitKey(0)
-cv2.destroyAllWindows()
+cv2.destroyAllWindows() 
