@@ -40,7 +40,7 @@ filenames = []
 
 for row in rows:
     row = row.split(",")
-    (filename, x1, y1, x2,y2) = row
+    (filename, x1, y1, x2, y2) = row
 
     image_path = os.path.join(images_path, filename)
     image = cv2.imread(image_path)
@@ -64,4 +64,6 @@ y = np.array(targets, dtype="float32")
 
 
 #Splitting data into training and validaton sets
-X_train, y_train, X_valid, y_valid = train_test_split(X, y, test_size=0.2, random_state=42)
+X_train, X_valid, y_train, y_valid = train_test_split(X, y, test_size=0.2, random_state=42)
+
+
