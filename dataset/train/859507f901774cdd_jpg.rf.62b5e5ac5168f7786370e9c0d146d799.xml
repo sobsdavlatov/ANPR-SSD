@@ -1,0 +1,27 @@
+<annotation>
+	<folder></folder>
+	<filename>859507f901774cdd_jpg.rf.62b5e5ac5168f7786370e9c0d146d799.jpg</filename>
+	<path>859507f901774cdd_jpg.rf.62b5e5ac5168f7786370e9c0d146d799.jpg</path>
+	<source>
+		<database>roboflow.ai</database>
+	</source>
+	<size>
+		<width>300</width>
+		<height>300</height>
+		<depth>3</depth>
+	</size>
+	<segmented>0</segmented>
+	<object>
+		<name>Vehicle-registration-plate</name>
+		<pose>Unspecified</pose>
+		<truncated>0</truncated>
+		<difficult>0</difficult>
+		<occluded>0</occluded>
+		<bndbox>
+			<xmin>77</xmin>
+			<xmax>90</xmax>
+			<ymin>159</ymin>
+			<ymax>164</ymax>
+		</bndbox>
+	</object>
+</annotation>
