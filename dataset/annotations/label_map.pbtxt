@@ -1,5 +1,4 @@
-item {
-    name: "Vehicle-registration-plate",
-    id: 1,
-    display_name: "Vehicle-registration-plate"
+item { 
+	name:'Vehicle-registration-plate'
+	id:1
 }
